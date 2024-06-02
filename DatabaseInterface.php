@@ -1,10 +1,22 @@
 <?php
+declare(strict_types=1);
 
 namespace FpDbTest;
 
+/**
+ *
+ */
 interface DatabaseInterface
 {
+    /**
+     * @param string $query
+     * @param array $args
+     * @return string
+     */
     public function buildQuery(string $query, array $args = []): string;
 
-    public function skip();
+    /**
+     * @return mixed
+     */
+    public function skip(): mixed;
 }
